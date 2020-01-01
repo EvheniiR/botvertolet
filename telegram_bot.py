@@ -1,17 +1,22 @@
 import telebot
+import config
 
 
-bot = telebot.TeleBot('911691979:AAGC8lyqXV-Sdwq58t6h2SWEpiGpI41fhso')
+bot = telebot.TeleBot(config.token)
 
-@bot.message_handler(commands=['start'])
-def start_message(message):
-	bot.send_message(message.chat.id, 'Пламенно зигую 0/0/0/!!!')
+#@bot.message_handler(commands=['start'])
+#def start_message(message):
+#   bot.send_message(message.chat.id, 'Пламенно зигую 0/0/0/!!!')
 
 @bot.message_handler(content_types=['text'])
-def send_text(message):
-	if message.text.lower() == 'зигую':
-		bot.send_message(message.chat.id, 'Привет, мой создатель!')
-	elif message.text.lower() == 'пока':
-		bot.send_message(message.chat.id, 'Прощай, создатель!')
+def repeat_all_messages(message):
+    bot.send_message(message.chat.id, message.text)
+#def send_text(message):
+    #if message.text.lower() == 'зигую':
+    #    bot.send_message(message.chat.id, 'Привет, мой создатель!')
+    #elif message.text.lower() == 'пока':
+    #    bot.send_message(message.chat.id, 'Прощай, создатель!')
 
-bot.polling()
+
+if __name__ == '__main__':
+    bot.polling(none_stop=True)
