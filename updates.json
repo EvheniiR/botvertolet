@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 702943752,
+      "message": {
+        "message_id": 71,
+        "from": {
+          "id": 181434267,
+          "is_bot": false,
+          "first_name": "Evhenii",
+          "last_name": "Evhenii",
+          "username": "Evhenii_Evhenii",
+          "language_code": "ru"
+        },
+        "chat": {
+          "id": 181434267,
+          "first_name": "Evhenii",
+          "last_name": "Evhenii",
+          "username": "Evhenii_Evhenii",
+          "type": "private"
+        },
+        "date": 1577998381,
+        "text": "12123"
+      }
+    }
+  ]
+}
