@@ -35,7 +35,7 @@ def get_message():
         return message
     return None
 
-def send_message(chat_id, text='Жди, пидр, блять!'):
+def send_message(chat_id, text='w8 please!'):
     url = URL + 'sendmessage?chat_id={}&text={}'.format(chat_id, text)
     requests.get(url)
 
@@ -51,8 +51,8 @@ def main():
             chat_id = answer['chat_id']
             text = answer['text']
 
-            if 'ЖЕЛАЙ СПОКОЙНОЙ НОЧИ!' in text:
-                send_message(chat_id, 'Спокойной ночи , Кристина)!')
+            if 'Hello!' in text:
+                send_message(chat_id, 'Hi, man!')
         else:
             continue
 
